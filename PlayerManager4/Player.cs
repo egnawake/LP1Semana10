@@ -15,6 +15,7 @@ namespace PlayerManager4
 
         public int CompareTo(Player other)
         {
+            if (other == null) return 1;
             return other.Score - Score;
         }
     }
