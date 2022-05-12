@@ -1,0 +1,22 @@
+1. Igualdade para diferenciação em conjuntos e uso como chaves:
+   obj1.GetHashCode() == obj2.GetHashCode() && (obj1.Equals(obj2) || obj2.Equals(obj1))
+
+2. Podemos alterar a definição de "igualdade" fazendo override aos métodos
+   GetHashCode e Equals da classe Object.
+
+3. Duas variáveis com tipo de valor são "iguais", por omissão, se o seu valor for igual.
+
+4. Duas variáveis com tipo de referência são "iguais", por omissão, se contiverem
+   a mesma referência (se apontarem para o mesmo objeto).
+
+5. String e StringBuilder são exceções na API do C#.
+
+6. Não são permitidos objetos "iguais" num conjunto.
+
+7. Não são permitidas chaves "iguais" num dicionário.
+
+8. São permitidos valores/objetos "iguais" num dicionário.
+
+9. São guardados num dicionário pares chave-valor.
+
+10. Procurar por um elemento na coleção é muito mais rápido num dicionário.
