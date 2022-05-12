@@ -70,6 +70,32 @@ namespace PlayerManager4
 
         private void ShowPlayers(IEnumerable<Player> playerCollection)
         {
+            Console.WriteLine("Sort options");
+            Console.WriteLine("1. Score, descending");
+            Console.WriteLine("2. Name, ascending");
+            Console.WriteLine("3. Name, descending");
+            Console.Write("> ");
+            string sortOption = Console.ReadLine();
+
+            if (sortOption == "1")
+            {
+                playerList.Sort();
+            }
+            else if (sortOption == "2")
+            {
+                IComparer<Player> nameComparer = new CompareByName(true);
+                playerList.Sort(nameComparer);
+            }
+            else if (sortOption == "3")
+            {
+                IComparer<Player> nameComparer = new CompareByName(false);
+                playerList.Sort(nameComparer);
+            }
+            else
+            {
+                playerList.Sort();
+            }
+
             foreach (Player player in playerCollection)
             {
                 Console.WriteLine("-> {0} : {1}",
