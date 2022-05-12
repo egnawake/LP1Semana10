@@ -14,6 +14,7 @@ namespace PlayerManager2
                 new Player("Marco", 200),
                 new Player("Verde", 250)
             };
+            playerList.Sort();
         }
 
         public void Run()
@@ -64,6 +65,7 @@ namespace PlayerManager2
             score = Convert.ToInt32(Console.ReadLine());
 
             playerList.Add(new Player(name, score));
+            playerList.Sort();
         }
 
         private void ShowPlayers(IEnumerable<Player> playerCollection)

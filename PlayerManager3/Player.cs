@@ -1,3 +1,5 @@
+using System;
+
 namespace PlayerManager2
 {
     public class Player : IComparable<Player>
